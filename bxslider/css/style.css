@@ -1,0 +1,17 @@
+.layer_popup
+{
+    position: absolute;
+    left:50px;
+    top: 50px;
+    cursor: move;
+    border: 1px solid red;
+}
+
+
+/* 
+    cursor: move;  옮기는 모양
+    cursor: pointer; 손가락모양
+    
+
+
+*/
