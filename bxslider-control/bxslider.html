@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>bxslider-control</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- bx-slider js/css 연결 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <!-- bx-slider js/css 끝 -->
+
+    <style>
+        #outer{
+            width: 600px;
+            height: 600px;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function(){
+            // slider 클래스 내부 요소를 슬라이드화 시킨다.
+            $(".slider").bxSlider({
+                
+                auto:true,   // 자동으로 넘기기
+
+                speed:600, // 전환속도
+
+                pause:3000, //  한 슬라이드가 머무르는 시간
+
+                autoControls:true, // 재생 제어창 추가
+
+                pager:false, // 페이지 바로가기 버튼
+
+                captions:true,  
+                // 캡션 사용하기(이미지 설명추가)
+                // 캡션은 이미지에 붙이는 설명인데 captions:true 로 
+                // 캡션을 사용하겠다고 하고, 이미지를 div로 감싼다.
+                // 그리고 이미지 title 속성에 값을 준다.
+                mode:'vertical', 
+                
+                // mode:'vertical'  위아래 방식 슬라이드 사용
+
+                //  mode:'fade' 페이드 방식 슬라이드 사용 
+
+            });
+        });
+    </script>
+
+</head>
+    <body>
+        <div id="outer">
+            <div class="slider">
+                    
+                <div>
+                    <img src="./images/dog1.jpg" alt="img1" title="큰 개1">
+                </div>
+
+                <div>
+                    <img src="./images/dog2.jpg" alt="img2" title="큰 개2">
+                </div>
+                
+                <div>
+                    <img src="./images/dog3.jpg" alt="img3" title="큰 개3">
+                </div>
+        </div>
+    </body>
+</html>
